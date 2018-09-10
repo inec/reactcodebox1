@@ -3,7 +3,7 @@ import TextInput from "./TextInput";
 
 class Aa extends React.Component {
   render() {
-    return <TextInput initText="start" />;
+    return <TextInput initText=" 開始 aa.js" />;
   }
 }
 

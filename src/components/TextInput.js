@@ -1,6 +1,6 @@
 import React from "react";
 import TextShow from "./TextShow";
-
+import PropTypes from "prop-types";
 type Props = {
   initText: string
 };
@@ -12,7 +12,6 @@ class TextInput extends React.Component {
 
   //
   constructor(props: Props) {
-    // super
     super(props);
 
     //
@@ -21,9 +20,7 @@ class TextInput extends React.Component {
     };
   }
 
-  // 定`this`
   handleChange = (e: Event) => {
-    //
     if (e.target instanceof HTMLInputElement) {
       this.setState({ text: e.target.value });
     }
@@ -43,10 +40,9 @@ class TextInput extends React.Component {
     );
   }
 }
-/*
-TextInput.propTypes = {
-  initText: React.PropTypes.string.isRequired
-};*/
 
-//匯出TextInput模組
+TextInput.propTypes = {
+  initText: PropTypes.string.isRequired
+};
+
 export default TextInput;
